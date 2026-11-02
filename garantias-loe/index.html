@@ -1,78 +1,109 @@
 <!doctype html>
-<html lang="es">
+<html lang="ca">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Garantías LOE · Pracmatik</title>
+<title>Garanties LOE · Pracmatik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="../estilo.css">
 <script defer src="../track.js"></script>
+<script defer src="../calcula.js"></script>
 </head>
 <body>
 <header class="cab"><div class="env">
   <a class="logo" href="../">pracmatik<span>.</span></a>
-  <nav><a href="../actas/">Actas de obra</a><a href="./" aria-current="page">Garantías LOE</a><a href="../partes/">Partes de trabajo</a><a href="../presupuestos/">Presupuestos</a></nav>
+  <nav><a href="../actas/">Actes d'obra</a><a href="./" aria-current="page">Garanties LOE</a><a href="../partes/">Parts de treball</a><a href="../presupuestos/">Pressupostos</a></nav>
 </div></header>
 
 <main>
 <section class="portada"><div class="env">
-  <span class="kicker">02 · Plazos de garantía LOE · <b>a medida</b></span>
-  <h1>Ningún vencimiento de garantía os pilla por sorpresa.</h1>
-  <p class="intro">Cada obra que entregáis arranca tres relojes: uno, tres y diez años desde la recepción. Os montamos un registro de obras entregadas que calcula esas fechas, os avisa antes de cada una y guarda la posventa de cada obra con su fecha y sus fotos.</p>
-  <a class="boton claro" href="https://www.pracmatik.com/herramientas/plazos-garantia-obra/" target="_blank" rel="noopener">Probar nuestra calculadora gratuita →</a>
+  <span class="kicker">Terminis de garantia LOE · <b>a mida</b></span>
+  <h1>Cada obra lliurada, amb les seves dates a la vista.</h1>
+  <p class="intro">La LOE és la llei que fixa quant de temps responeu d'una obra després de lliurar-la. Us muntem un registre de les obres lliurades que calcula aquestes dates, avisa abans de cada una i guarda la postvenda de cada obra amb data i fotos.</p>
+  <a class="boton claro" href="https://www.pracmatik.com/herramientas/plazos-garantia-obra/" target="_blank" rel="noopener">Provar la nostra calculadora gratuïta →</a>
 </div></section>
 
 <section><div class="env">
-  <span class="kicker">Así lo veríais · ejemplo con obras inventadas</span>
-  <h2>Todas las obras entregadas en una tabla.</h2>
+  <span class="kicker">Els tres terminis, en clar</span>
+  <h2>Tres rellotges que comencen el dia de la recepció.</h2>
+  <div class="tres">
+    <div><h3>1 any · acabats</h3><p>Defectes d'execució en elements d'acabat. És el que respon el constructor i el que abans venç.</p></div>
+    <div><h3>3 anys · habitabilitat</h3><p>Defectes d'elements constructius o d'instal·lacions que fan que l'edifici no compleixi els requisits d'habitabilitat.</p></div>
+    <div><h3>10 anys · estructura</h3><p>Danys a fonaments, pilars, bigues, forjats o murs de càrrega que comprometen la resistència de l'edifici.</p></div>
+  </div>
+  <p class="nota">Article 17.1 de la Llei 38/1999. Es compten des de la recepció sense reserves o des que s'esmenen les reserves. A més, cada dany s'ha de reclamar dins dels dos anys següents a quan apareix (article 18.1).</p>
+</div></section>
+
+<section><div class="env">
+  <span class="kicker">Un cas inventat</span>
+  <h2>La Laura porta la postvenda de l'empresa.</h2>
+  <div class="dia">
+    <div>
+      <h3>Avui</h3>
+      <ul class="hores">
+        <li><time>Dilluns</time><span>Truca un hotel lliurat fa uns mesos: hi ha una filtració en una habitació.</span></li>
+        <li class="pes"><time>Dilluns</time><span>Busca l'acta de recepció per saber la data, mira si hi va haver reserves i a quin industrial li toca.</span></li>
+        <li class="pes"><time>Dimarts</time><span>Ho apunta en un Excel que només ella entén i envia un correu a l'industrial.</span></li>
+        <li class="pes"><time>Mesos després</time><span>Ningú recorda que l'any d'acabats d'unes oficines va vèncer la setmana passada sense revisar-les.</span></li>
+      </ul>
+    </div>
+    <div class="despres">
+      <h3>Amb el registre</h3>
+      <ul class="hores">
+        <li><time>Dilluns</time><span>Truca el mateix hotel. La Laura obre l'obra i hi veu les tres dates i en quin termini és.</span></li>
+        <li><time>Dilluns</time><span>Apunta l'avís amb fotos i l'industrial que l'ha de resoldre. Queda calculat fins quan es pot reclamar.</span></li>
+        <li><time>Quan toca</time><span>Li arriba un correu abans que venci l'any d'acabats de les oficines, a temps per revisar-les.</span></li>
+        <li><time>Sempre</time><span>Qualsevol persona de l'empresa troba l'estat de cada obra sense preguntar-li a ella.</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="env">
+  <span class="kicker">Així ho veuríeu · obres inventades</span>
+  <h2>Totes les obres lliurades en una taula.</h2>
   <div class="desliza">
   <table class="tabla">
-    <thead><tr><th>Obra</th><th>Recepción</th><th>1 año · acabados</th><th>3 años · habitabilidad</th><th>10 años · estructura</th><th>Estado</th></tr></thead>
+    <thead><tr><th>Obra</th><th>Recepció</th><th>1 any</th><th>3 anys</th><th>10 anys</th><th>Estat</th></tr></thead>
     <tbody>
-      <tr><td>Hotel, reforma de 60 habitaciones</td><td class="num">12/02/2025</td><td class="num">12/02/2026</td><td class="num">12/02/2028</td><td class="num">12/02/2035</td><td><span class="ok">1 año cerrado</span></td></tr>
-      <tr><td>Oficinas, fitout de dos plantas</td><td class="num">Con reservas, subsanadas el 10/12/2025</td><td class="num">10/12/2026</td><td class="num">10/12/2028</td><td class="num">10/12/2035</td><td><span class="marca">Aviso enviado: 1 año a punto de vencer</span></td></tr>
-      <tr><td>Clínica dental, obra nueva de local</td><td class="num">03/04/2026</td><td class="num">03/04/2027</td><td class="num">03/04/2029</td><td class="num">03/04/2036</td><td><span class="ok">En plazo</span></td></tr>
+      <tr><td>Hotel, reforma de 60 habitacions</td><td class="num">12/02/2025</td><td class="num">12/02/2026</td><td class="num">12/02/2028</td><td class="num">12/02/2035</td><td><span class="ok">1 any tancat</span></td></tr>
+      <tr><td>Oficines, fitout de dues plantes</td><td class="num">Amb reserves, esmenades el 10/12/2025</td><td class="num">10/12/2026</td><td class="num">10/12/2028</td><td class="num">10/12/2035</td><td><span class="marca">Avís enviat: venç l'any</span></td></tr>
+      <tr><td>Clínica dental, local nou</td><td class="num">03/04/2026</td><td class="num">03/04/2027</td><td class="num">03/04/2029</td><td class="num">03/04/2036</td><td><span class="ok">Dins de termini</span></td></tr>
     </tbody>
   </table>
   </div>
-  <p class="nota">Las fechas se cuentan de fecha a fecha desde la recepción sin reservas o desde la subsanación de las reservas, como dice el artículo 17.1 de la Ley 38/1999.</p>
 </div></section>
 
 <section><div class="env">
-  <span class="kicker">Qué haría el sistema</span>
-  <h2>Lo que hoy se lleva de memoria, apuntado y con aviso.</h2>
-  <ol class="pasos">
-    <li><b>Alta de la obra</b><span>Al firmar el acta de recepción se da de alta la obra con su fecha. Si hubo reservas, se apunta la fecha en que se subsanan.</span></li>
-    <li><b>Avisos por correo</b><span>Con la antelación que elijáis antes de cada vencimiento, a la persona responsable de cada obra.</span></li>
-    <li><b>Posventa registrada</b><span>Cada aviso de la propiedad entra con su fecha, sus fotos, el industrial que lo tiene que resolver y cuándo se cerró.</span></li>
-    <li><b>Plazo de reclamación</b><span>De cada daño se calculan los dos años que marca el artículo 18.1 para reclamar, contados desde que aparece.</span></li>
-  </ol>
+  <span class="kicker">Les vostres hores</span>
+  <h2>Quant temps us porta avui la postvenda?</h2>
+  <p>Aquí el que més es guanya és no perdre cap data. Però també hi ha hores: posa-hi els vostres números.</p>
+  <form class="calc" onsubmit="return false">
+    <div class="camps">
+      <label>Avisos de postvenda al mes<small>De totes les obres lliurades</small><input name="quants" inputmode="decimal" placeholder="el vostre número"></label>
+      <label>Minuts per avís, avui<small>Buscar l'obra i la data, apuntar-ho, avisar l'industrial</small><input name="avui" inputmode="decimal" placeholder="el vostre número"></label>
+      <label>Minuts amb el registre<small>Opcional</small><input name="revisio" inputmode="decimal" placeholder="el vostre número"></label>
+    </div>
+    <div class="resultat" aria-live="polite"></div>
+  </form>
 </div></section>
 
 <section><div class="env dos">
   <div>
-    <span class="kicker">Para Construnext</span>
-    <h2>Pensado para quien entrega muchas obras al año.</h2>
+    <span class="kicker">Per a Construnext</span>
+    <h2>On us vagi millor.</h2>
   </div>
   <div>
-    <p>Con obras en cuatro ciudades y clientes que repiten, la posventa no se puede llevar en la cabeza de una persona. El año de acabados es el que más os toca como constructora, y es el que antes vence.</p>
-    <p>Si ya tenéis las actas de recepción en PDF, las podemos leer para cargar las obras antiguas de golpe. Cada fecha leída de un documento la confirma una persona antes de darla por buena.</p>
-    <p>Lo dejamos donde os vaya mejor: en una hoja de Google o Excel compartida, en vuestro correo, o enlazado con las actas de obra si también las automatizáis con nosotros.</p>
-  </div>
-</div></section>
-
-<section><div class="env">
-  <div class="caja aviso">
-    <h3>Lo que conviene saber</h3>
-    <p>Las fechas se calculan con exactitud a partir de los datos que se dan de alta. Decidir si un daño concreto es de acabados, de habitabilidad o de estructura es un criterio técnico y jurídico: el sistema lo deja apuntado para que lo valore vuestro técnico o vuestro abogado, no lo decide solo. No sirve para obra pública, que se rige por la Ley 9/2017 y por lo que diga cada contrato.</p>
+    <p>Ho deixem en un full de Google o d'Excel compartit, amb els avisos al vostre correu. Si les actes de recepció ja les teniu en PDF, les podem llegir per carregar les obres antigues d'una vegada. Cada data llegida d'un document la confirma una persona abans de donar-la per bona.</p>
+    <p>Decidir si un dany concret és d'acabats, d'habitabilitat o d'estructura és un criteri tècnic i jurídic: el registre ho deixa apuntat perquè ho valori el vostre tècnic. Les dates, en canvi, es calculen exactes. No serveix per a obra pública, que es regeix per cada contracte.</p>
   </div>
 </div></section>
 </main>
 
 <footer class="pie"><div class="env">
-  <a href="../">← Volver a las cuatro presentaciones</a> · Albert Grau · Pracmatik · <a href="mailto:albert@pracmatik.com">albert@pracmatik.com</a> · +34 680 613 913
+  <a href="../">← Tornar a l'inici</a> · Albert Grau · Pracmatik · <a href="mailto:albert@pracmatik.com">albert@pracmatik.com</a> · +34 680 613 913
 </div></footer>
 </body>
 </html>
