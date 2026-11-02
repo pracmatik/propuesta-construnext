@@ -1,0 +1,75 @@
+:root{
+  --papel:#F7F5F0; --papel2:#EFECE4; --tinta:#111111; --tinta2:#1C1A17;
+  --plomo:#6E6A60; --ceniza:#E6E1D7; --ceniza2:#D6CFC0; --obra:#F2541B;
+  --ancho:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta2);font:17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--obra);outline-offset:3px}
+.env{max-width:var(--ancho);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Inter Tight",Inter,system-ui,sans-serif;color:var(--tinta);margin:0;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(40px,7vw,84px);font-weight:800;max-width:14ch}
+h2{font-size:clamp(28px,4vw,44px);font-weight:800;max-width:20ch;margin-bottom:22px}
+h3{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+p{margin:0 0 1em;max-width:64ch}
+section{padding:84px 0;border-top:1px solid var(--ceniza)}
+.kicker{font:500 12px/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--plomo);margin-bottom:20px;display:block}
+.kicker b{color:var(--obra);font-weight:500}
+.intro{font-size:20px;color:var(--plomo);max-width:56ch;margin-top:22px}
+/* Cabecera */
+.cab{padding:22px 0}
+.cab .env{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font:800 24px/1 "Inter Tight",Inter,sans-serif;letter-spacing:-.05em;text-decoration:none;color:var(--tinta)}
+.logo span{color:var(--obra)}
+.cab nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+.cab nav a{text-decoration:none;color:var(--plomo)}
+.cab nav a:hover,.cab nav a[aria-current]{color:var(--tinta)}
+.portada{padding:70px 0 90px;border-top:0}
+.para{font-size:15px;color:var(--plomo);margin-top:30px}
+/* Tarjetas */
+.rej{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.tarjeta{background:#fff;border:1px solid var(--ceniza);padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
+a.tarjeta:hover{border-color:var(--tinta)}
+.tarjeta .n{font:500 13px "JetBrains Mono",monospace;color:var(--obra)}
+.tarjeta p{color:var(--plomo);margin:0}
+.tarjeta .ir{margin-top:auto;padding-top:14px;font-weight:600;color:var(--tinta)}
+.tarjeta .quien{font-size:13px;color:var(--plomo);font-family:"JetBrains Mono",monospace}
+/* Pasos */
+.pasos{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:p}
+.pasos li{border-top:2px solid var(--tinta);padding-top:16px;counter-increment:p}
+.pasos li::before{content:"0" counter(p);font:500 13px "JetBrains Mono",monospace;color:var(--obra);display:block;margin-bottom:8px}
+.pasos b{display:block;color:var(--tinta);margin-bottom:4px}
+.pasos span{color:var(--plomo);font-size:15px}
+/* Dos columnas */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.caja{background:var(--papel2);padding:26px 28px;border-left:3px solid var(--tinta)}
+.caja p:last-child{margin-bottom:0}
+.caja.aviso{border-left-color:var(--obra)}
+/* Tablas de ejemplo */
+.tabla{width:100%;border-collapse:collapse;background:#fff;font-size:15px;margin-top:10px}
+.tabla th,.tabla td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--ceniza);vertical-align:top}
+.tabla th{font:500 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--plomo);background:var(--papel2)}
+.tabla td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.marca{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;background:#FDE7DE;color:#9A2F08}
+.ok{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;background:var(--ceniza);color:var(--tinta)}
+.nota{font-size:13px;color:var(--plomo);margin-top:10px}
+.lista{padding-left:20px;margin:0 0 1em}
+.lista li{margin-bottom:8px;max-width:62ch}
+.boton{display:inline-block;background:var(--tinta);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;margin:6px 10px 0 0}
+.boton.claro{background:transparent;color:var(--tinta);border:1px solid var(--tinta)}
+.boton:hover{background:var(--obra);border-color:var(--obra);color:#fff}
+.pie{padding:50px 0 70px;font-size:14px;color:var(--plomo)}
+.pie a{color:var(--tinta)}
+.desliza{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:860px){
+  .env{padding:0 16px}
+  section{padding:60px 0}
+  .rej,.dos{grid-template-columns:1fr;gap:22px}
+  .pasos{grid-template-columns:1fr 1fr}
+  .cab .env{flex-direction:column;align-items:flex-start}
+  .intro{font-size:18px}
+}
+@media (max-width:480px){.pasos{grid-template-columns:1fr}.tabla{font-size:14px}.tabla th,.tabla td{padding:9px 10px}}
